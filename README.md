@@ -14,7 +14,7 @@ wget -O /tmp/pantum.zip "https://www.pantum.ru/wp-content/uploads/2024/06/pantum
 # установка драйверов для Avision AV332U
 wget -O /tmp/avision.tar.gz "https://docscan.ru/media/drivers/AD345GN_LINUX_DRIVER/scanner-driver-avision_rpm64_0.1.0.24165_20240613.tar.gz" && cd /tmp && tar -xzf /tmp/avision.tar.gz && rpm -Uvh /tmp/scanner-driver-avision-0.1.0-24165.x86_64.rpm
 # установка драйверов для Fujitsu SP-1120
-epm play -y pfusp && copy /usr/lib/sane/libsane-pfusp* /usr/lib64/sane/
+epm play -y pfusp && cp /usr/lib/sane/libsane-pfusp* /usr/lib64/sane/
 # установка прав доступа к Fujitsu SP-1120
    echo -ne "ACTION!=\"add\", GOTO=\"pfusp_scanner_rules_end\"\n" > /etc/udev/rules.d/60-pfusp.rules 
    echo -ne "ENV{DEVTYPE}!=\"usb_device\", GOTO=\"pfusp_scanner_rules_end\"\n" >> /etc/udev/rules.d/60-pfusp.rules 
