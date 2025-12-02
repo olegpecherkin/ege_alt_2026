@@ -33,4 +33,4 @@ epm play -y pfusp && copy /usr/lib/sane/libsane-pfusp* /usr/lib64/sane/
    echo -ne "ENV{pfusp_driver}==\"yes\", ENV{libsane_matched}=\"yes\"\n\n" >> /etc/udev/rules.d/60-pfusp.rules 
    echo -ne "LABEL=\"pfusp_scanner_rules_end\"\n" >> /etc/udev/rules.d/60-pfusp.rules 
 ```
-После выполнения команд необходимо переподключить скан Fujitsu SP-1120 по USB
+После выполнения команд необходимо переподключить Fujitsu SP-1120 по USB
