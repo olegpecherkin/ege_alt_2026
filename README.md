@@ -5,7 +5,7 @@
 - Avision AV332U
 - Fujitsu SP-1120
 
-# Alt Linux 10.4
+# Alt Linux 10.4 / 11.2
 
 Запускаем эмулятор терминала и вводим команды:
 
@@ -14,6 +14,8 @@
 su -
 # обновляем пакеты
 apt-get update
+# устанавливаем epm для 11.2
+apt-get install eepm
 # установка КриптоПРО CSP
 wget -O /tmp/linux-amd64.tgz "https://ou4.ru/f/linux-amd64.tgz" && cd /tmp && tar -xzf linux-amd64.tgz && cd /tmp/linux-amd64 && apt-get install -y cryptopro-preinstall && apt-get install cprocsp-curl* lsb-cprocsp-base* lsb-cprocsp-capilite* lsb-cprocsp-kc1-64* lsb-cprocsp-rdr-64* && apt-get install -y cprocsp-rdr-gui-gtk* cprocsp-rdr-rutoken* cprocsp-rdr-pcsc* lsb-cprocsp-pkcs11* pcsc-lite-rutokens pcsc-lite-ccid && apt-get install -y cprocsp-rdr-cryptoki* && apt-get install -y cprocsp-cptools*
 # установка драйверов для Pantum BP5100DN
